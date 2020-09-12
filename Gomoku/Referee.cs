@@ -20,12 +20,13 @@ namespace Gomoku
         private bool CheckLine(char[,] _array, int _i, int _j, char _figure, int dx, int dy)
         {
             bool checkWin = false;
+            cnt = 0;
             while (_array[_i, _j] == _figure && _j < board.GetLength(1) && _i < board.GetLength(0) && _j > 0)
             {
                 cnt++;
                 if (cnt == 5)
                 {
-                    Console.WriteLine($"Winner {Char.ToString(_figure)}");
+                    Console.WriteLine($"Winner {_figure}");
                     checkWin = true;
                     break;
                 }
@@ -44,16 +45,15 @@ namespace Gomoku
             {
                 for (int j = 0; j < _board.GetLength(1); j++)
                 {
-                    cnt = 0;
                     if (board[i, j] != '_')
                     {
-                        CheckLine(_board, i, j, _board[i, j], 1, 0); //горизанталь
-                        cnt = 0;
-                        CheckLine(_board, i, j, _board[i, j], 0, 1); // вертикаль
-                        cnt = 0;
-                        CheckLine(_board, i, j, _board[i, j], 1, 1); //диагональ 135 градусов
-                        cnt = 0;
-                        CheckLine(_board, i, j, _board[i, j], -1, 1); // диагональ 45 градусов
+                        if (CheckLine(_board, i, j, _board[i, j], 1, 0)) break; //горизанталь
+                        else
+                            if(CheckLine(_board, i, j, _board[i, j], 0, 1)) break; // вертикаль
+                        else
+                            if(CheckLine(_board, i, j, _board[i, j], 1, 1)) break; //диагональ 135 градусов
+                        else
+                            if(CheckLine(_board, i, j, _board[i, j], -1, 1)) break; // диагональ 45 градусов
                     }
                     if (cnt == 5)
                     {
