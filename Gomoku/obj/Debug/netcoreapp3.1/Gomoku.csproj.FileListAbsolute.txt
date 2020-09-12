@@ -9,3 +9,16 @@ D:\c#\Gomoku\Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.AssemblyInfoInputs.cac
 D:\c#\Gomoku\Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.AssemblyInfo.cs
 D:\c#\Gomoku\Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.dll
 D:\c#\Gomoku\Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.pdb
+D:\c#\#Gomoku\Gomoku\bin\Debug\netcoreapp3.1\Gomoku.exe
+D:\c#\#Gomoku\Gomoku\bin\Debug\netcoreapp3.1\Gomoku.deps.json
+D:\c#\#Gomoku\Gomoku\bin\Debug\netcoreapp3.1\Gomoku.runtimeconfig.json
+D:\c#\#Gomoku\Gomoku\bin\Debug\netcoreapp3.1\Gomoku.runtimeconfig.dev.json
+D:\c#\#Gomoku\Gomoku\bin\Debug\netcoreapp3.1\Gomoku.dll
+D:\c#\#Gomoku\Gomoku\bin\Debug\netcoreapp3.1\Gomoku.pdb
+D:\c#\#Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.csprojAssemblyReference.cache
+D:\c#\#Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.AssemblyInfoInputs.cache
+D:\c#\#Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.AssemblyInfo.cs
+D:\c#\#Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.dll
+D:\c#\#Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.pdb
+D:\c#\#Gomoku\Gomoku\bin\Debug\netcoreapp3.1\MoreLinq.dll
+D:\c#\#Gomoku\Gomoku\obj\Debug\netcoreapp3.1\Gomoku.csproj.CopyComplete

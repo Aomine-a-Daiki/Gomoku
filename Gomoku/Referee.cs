@@ -8,34 +8,62 @@ namespace Gomoku
     {
         int cnt;
         char[,] board;
+        public int r;
+        bool result = false;
 
         public Referee(char[,] _board)
         {
             board = _board;
+            r = _board.GetLength(0);
         }
 
-        private void Horizontal(char[,] _array, int _i, int _j)
+        private bool CheckLine(char[,] _array, int _i, int _j, char _figure, int dx, int dy)
         {
-            while(_array[_i,_j] == _array[_i, _j+1])
+            bool checkWin = false;
+            while (_array[_i, _j] == _figure && _j < board.GetLength(1) && _i < board.GetLength(0) && _j > 0)
             {
                 cnt++;
-                j++;
-                if(cnt == 4)
+                if (cnt == 5)
                 {
-                    Console.WriteLine("Winner1");
+                    Console.WriteLine($"Winner {Char.ToString(_figure)}");
+                    checkWin = true;
+                    break;
                 }
+                else if (_i == board.GetLength(0) - 1 || _j == 0) break;
+                _i += dy;
+                _j += dx;
             }
+
+            return checkWin;
         }
 
-        public void CheckWinner()
+        public bool CheckWinner(char[,] _board)
         {
-            for(int i = 0; i < board.GetLength(0); i++)
-            {
-                for(int j = 0; j < board.GetLength(1); j++)
-                {
 
+            for (int i = 0; i < _board.GetLength(0); i++)
+            {
+                for (int j = 0; j < _board.GetLength(1); j++)
+                {
+                    cnt = 0;
+                    if (board[i, j] != '_')
+                    {
+                        CheckLine(_board, i, j, _board[i, j], 1, 0); //горизанталь
+                        cnt = 0;
+                        CheckLine(_board, i, j, _board[i, j], 0, 1); // вертикаль
+                        cnt = 0;
+                        CheckLine(_board, i, j, _board[i, j], 1, 1); //диагональ 135 градусов
+                        cnt = 0;
+                        CheckLine(_board, i, j, _board[i, j], -1, 1); // диагональ 45 градусов
+                    }
+                    if (cnt == 5)
+                    {
+                        result = true;
+                        break;
+                    }
                 }
             }
+
+            return result;
         }
     }
 }
