@@ -6,6 +6,8 @@ namespace Gomoku
 {
     class Point
     {
+        //Класс "Point" используется для расчета подходящей точки на доске
+
         public int x;
         public int y;
         public double weight = 0;

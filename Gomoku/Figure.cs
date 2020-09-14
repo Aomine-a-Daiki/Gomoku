@@ -4,15 +4,12 @@ namespace Gomoku
 {
 	class Figure
 	{
+		// Класс "Фигура" используется для постановки фигуры на доску игроком(принимает координаты и символ)
+
 		public int x;
 		public int y;
 		public char sym;
 
-		/*public Figure(int _x, int _y, char _sym)
-		{
-			x = _x;
-			y = _y;
-			sym = _sym;
-		}*/
+
 	}
 }

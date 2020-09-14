@@ -12,7 +12,6 @@ namespace Gomoku
             GameBoard GameBoard = new GameBoard(boardSize);
             GameBoard.CreateBoard();
             char[,] board = GameBoard.Board;
-            //GameBoard.DrawGameBoard(board);
 
             Referee referee = new Referee(board);
 
@@ -20,14 +19,11 @@ namespace Gomoku
             Player1 player2 = new Player1('0');
 
 
-            //Thread.Sleep(2000);
-            //Console.Clear();
-
             while (true)
             {
                 Figure figure1 = player1.Move(board);
                 board[figure1.y, figure1.x] = player1.sym;
-                Thread.Sleep(1000);
+                Thread.Sleep(1500);
                 Console.Clear();
                 GameBoard.DrawGameBoard(board);
                 referee.CheckWinner(board);
@@ -36,13 +32,12 @@ namespace Gomoku
                 {
                     Figure figure2 = player2.Move(board);
                     board[figure2.y, figure2.x] = player2.sym;
-                    Thread.Sleep(1000);
+                    Thread.Sleep(1500);
                     Console.Clear();
                     GameBoard.DrawGameBoard(board);
+                    if(referee.CheckWinner(board)) break;
                 }
-                if (referee.CheckWinner(board)) break;
             }
-
         }
     }
 }

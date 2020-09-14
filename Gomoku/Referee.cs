@@ -6,6 +6,9 @@ namespace Gomoku
 {
     class Referee
     {
+        //Класс Referee находит первую не пустую позицию - проверяет по 4м направлениям победную комбинацию
+        //Метод CheckLine отвечает за поиск победной комбинации
+
         int cnt;
         char[,] board;
         public int r;

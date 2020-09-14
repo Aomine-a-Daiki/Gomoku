@@ -6,6 +6,9 @@ namespace Gomoku
 {
     class GameBoard
     {
+        // Класс "Доска" при объявление элемента принимает одно числовое значения для определения размера доски
+        // Метод "Draw" отрисовывает доску в консоли
+
         int size;
         public char[,] Board;
         public GameBoard(int _size)
